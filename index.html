@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration form</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background: rgb(222, 241, 252);
+            align-items: center;
+            justify-content: center;
+        }
+        .one{
+           
+           width: 76%;
+           border-radius: 4px;
+           background: white;
+           margin: 50px 200px 50px 200px ;
+           padding: 20px;
+           box-shadow: 1px 1px 12px 1px ;
+        }
+        .form{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            
+            margin: 30px;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+            color: rgb(7, 177, 244);
+           
+        }
+        
+        label{
+            min-width: 100%;
+            padding: 5px;
+            font-size: large;
+            margin: 0;
+        }
+        input{
+            min-width: 100%;
+            margin: 3px 0 7px 5px;
+            padding: 10px;
+            
+        }
+        
+        input[type=radio],
+        input[type=checkbox]{
+           min-width: 18px;
+         
+            
+        }
+        .gens,.skill{
+            margin-bottom: 20px;
+        }
+        
+        select{
+            min-width: 100%;
+            padding: 10px;
+			margin: 3px 0 7px 5px ;
+        }
+        textarea{
+            min-height: 45%;
+            height: 150px;
+            width: 100%;
+            padding: 5px;
+            margin: 3px 0 7px 5px;
+        }
+        input[type=reset],
+        input[type=submit]{
+            min-width: 30%;
+            background-color: rgb(6, 178, 246);
+            border: none;
+            border-radius: 10px;
+            margin: 20px 0 7px 5px;
+            font-size: large;
+            cursor: pointer;
+            color: white;
+            
+        }
+        
+        input[type=reset]:hover,
+        input[type=submit]:hover{
+            background-color: aquamarine;
+        }
+        @media screen and (max-width:900px) {
+            .one{
+               max-width: 80%;
+                width: 90%;
+                margin: 40px 80px 40px 80px;
+            }
+            label{
+                min-width: 100%;
+            }
+            input,select,textarea{
+                flex: 100%;
+               min-width: 100%;
+            }
+            input[type=radio],input[type=checkbox]{
+                min-width:18px;
+            }
+           
+        }
+        @media screen and (max-width: 600px){
+            .one{
+                 max-width: 100%;
+                width: 100%;
+                 padding: 1px;
+                margin: 1px;
+            }
+            
+			
+			input[type=radio],input[type=checkbox]{
+				min-width: 1%;
+                
+            
+			}
+            
+			input,select,textarea{
+				felx:100%;
+				min-width: 100%;
+			}
+		}
+        
+    </style>
+</head>
+<body>
+   <div class="one">
+      <h1 class="heading">Registration form</h1>
+      <form action="" class="form">
+       
+        <label for="fname">Enter Full Name:</label>
+        <input type="text" id="fname" name="fname" placeholder="Enter your full name">
+        <label for="email">Enter the email:</label>
+        <input type="text" id="email" name="email" placeholder="Enter your email id">
+        <label for="password">Enter Password:</label>
+        <input type="text" id="password" name="password" placeholder="Enter your password">
+       
+       
+        <label for="gender" >Gender:</label>
+         
+        <div class="gens">
+        <input type="radio" name="gen" id="male">
+        <label for="male" >Male</label>
+        <input type="radio" name="gen" id="female" >
+        <label for="female" >Female</label>
+        </div>
+
+        <label for="skills" >Skills:</label>
+         
+        <div class="skill">
+        <input type="checkbox" id="html" name="skills">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="skills">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="js" name="skills">
+        <label for="js">JAVA SCRIPT</label>
+        </div>
+        
+        
+
+        <label for="country">Select Country:</label>
+        <select name="country" id="country">
+            <option value="india">India</option>
+            <option value="dubai">Dubai</option>
+            <option value="pakistan">Pakistan</option>
+            <option value="italy">Italy</option>
+            <option value="korea">Korea</option>
+        </select>
+
+        <label for="about">About You:</label>
+         <textarea name="about" id="about" placeholder="write About yourself..."></textarea>
+         <input type="reset" value="reset" >
+         <input type="submit" value="submit" onclick="alert('Form is successfully submitted')" name="" >
+      </form>
+   </div>
+</body>
+</html>
